@@ -3,11 +3,10 @@ import React from "react";
 export default function Home({ pokemon }) {
   return (
     <div>
-      Pokédex
-      <ul>
+      <ul className="pokemon-list">
           {pokemon.map((pokeman, index) => (
-              <li key={index}>
-                  <img src={pokeman.image} alt={pokeman.name} />
+              <li className="pokemon-item" key={index}>
+                  <img src={pokeman.image} alt={pokeman.name} width="150" height="150" />
                   <p>{pokeman.name}</p>
               </li>
           ))}
